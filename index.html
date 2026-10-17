@@ -59,6 +59,7 @@
     <li><a href="#platform"><img src="assets/img/t-platform.webp" width="640" height="480" alt="" loading="eager"><span lang="tr">Çok oyunculu platform</span><span lang="en">Multiplayer platform</span></a></li>
     <li><a href="#lum-phone"><img src="assets/img/t-phone.webp" width="640" height="480" alt="" loading="eager"><span lang="tr">lum-phone</span><span lang="en">lum-phone</span></a></li>
     <li><a href="#luminer"><img src="assets/img/t-luminer.webp" width="640" height="480" alt="" loading="eager"><span lang="tr">Luminer Studios</span><span lang="en">Luminer Studios</span></a></li>
+    <li><a href="#ai-video"><img src="assets/img/t-video.webp" width="640" height="480" alt="" loading="eager"><span lang="tr">Yapay zeka ile video</span><span lang="en">AI video</span></a></li>
     <li><a href="#tolmac"><img src="assets/img/t-tolmac.webp" width="640" height="480" alt="" loading="eager"><span lang="tr">Tolmac</span><span lang="en">Tolmac</span></a></li>
     <li><a href="#luxera"><img src="assets/img/t-luxera.webp" width="640" height="480" alt="" loading="eager"><span lang="tr">LUXERA</span><span lang="en">LUXERA</span></a></li>
     <li><a href="#proscore"><img src="assets/img/t-proscore.webp" width="640" height="480" alt="" loading="eager"><span lang="tr">ProScore</span><span lang="en">ProScore</span></a></li>
@@ -128,6 +129,27 @@
       <p lang="en">The storefront where I will sell my scripts. I made the brand, the site and the promotional visuals myself. I built a pipeline for product images: the real script interface opens in a browser with mock data, renders at 4× resolution and drops into the composition.</p>
       <ul class="results">
         <li><strong>TR / EN</strong> <span lang="tr">iki dilli</span><span lang="en">bilingual</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="work" id="ai-video">
+    <figure class="art art-videos">
+      <video src="assets/video/hero-logo.mp4" poster="assets/video/hero-poster.webp" width="1280" height="720" muted loop playsinline autoplay preload="metadata" aria-label="Işık partiküllerinin dalgalanarak Luminer Studios logosunu oluşturduğu video"></video>
+      <video src="assets/video/car-orbit.mp4" poster="assets/video/car-poster.webp" width="1280" height="720" muted loop playsinline autoplay preload="metadata" aria-label="Dumanlı karanlık bir stüdyoda kameranın bir spor otomobilin etrafında döndüğü video"></video>
+      <figcaption><span lang="tr">Sitenin açılış videosu ve araç bölümü videosu. Her biri 8 saniye.</span><span lang="en">The site's opening video and the vehicles section video. Eight seconds each.</span></figcaption>
+    </figure>
+    <div class="label">
+      <h3><span lang="tr">Yapay zeka ile video</span><span lang="en">AI video</span></h3>
+      <dl class="meta">
+        <div><dt><span lang="tr">Yıl</span><span lang="en">Year</span></dt><dd>2026</dd></div>
+        <div><dt><span lang="tr">Rol</span><span lang="en">Role</span></dt><dd><span lang="tr">Konsept, üretim ve seçim</span><span lang="en">Concept, generation and selection</span></dd></div>
+        <div><dt><span lang="tr">Araçlar</span><span lang="en">Stack</span></dt><dd>Nano Banana Pro, Seedance 2.0</dd></div>
+      </dl>
+      <p lang="tr">Luminer Studios sitesi için ürettiğim iki video. Önce Nano Banana Pro ile bir anahtar görsel üretiyorum: logonun veya aracın son hali. Sonra bu görseli Seedance 2.0'da videonun başlangıç ya da bitiş karesi olarak kullanıyorum. Böylece marka, ışık ve kompozisyon bütün karelerde tutarlı kalıyor.</p>
+      <p lang="en">Two videos I produced for the Luminer Studios site. First I generate a key image with Nano Banana Pro: the final state of the logo or the car. Then I use that image as the first or last frame of the video in Seedance 2.0. This keeps the brand, the lighting and the composition consistent across every frame.</p>
+      <ul class="results">
+        <li><strong><span lang="tr">Sitede</span><span lang="en">Live</span></strong> <span lang="tr">açılış ve araç bölümünde kaydırmayla oynatılıyor</span><span lang="en">in the site's opening and vehicles sections, played on scroll</span></li>
       </ul>
     </div>
   </article>
@@ -275,6 +297,9 @@
       });
     });
     sync();
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.querySelectorAll("video[autoplay]").forEach(function (v) { v.pause(); v.removeAttribute("autoplay"); v.setAttribute("controls", ""); });
+    }
   })();
 </script>
 </body>
